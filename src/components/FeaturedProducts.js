@@ -7,7 +7,7 @@ import Loading from './Loading'
 import Product from './Product'
 
 const FeaturedProducts = () => {
-  ;<h4>featured products</h4>
+  return <h4>featured products</h4>
 }
 
 const Wrapper = styled.section`
