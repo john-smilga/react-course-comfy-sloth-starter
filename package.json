@@ -13,14 +13,10 @@
     "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-<<<<<<< HEAD
-=======
     "react-scripts": "4.0.0",
     "stripe": "^8.130.0",
->>>>>>> 37651a5598fe43d1c5dafd76c15c0e8d61bbe6a3
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },

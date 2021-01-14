@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import styled from "styled-components";
-import { PageHero } from "../components";
-=======
-import React from 'react'
-import styled from 'styled-components'
-import { PageHero, StripeCheckout } from '../components'
+import { PageHero, StripeCheckout } from "../components";
 // extra imports
-import { useCartContext } from '../context/cart_context'
-import { Link } from 'react-router-dom'
 
->>>>>>> 37651a5598fe43d1c5dafd76c15c0e8d61bbe6a3
 const CheckoutPage = () => {
   return (
     <main>
