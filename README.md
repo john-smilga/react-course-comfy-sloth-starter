@@ -15,12 +15,4 @@
 "react-dom": "^17.0.1",
 "react-scripts": "4.0.0",
 ```
-# react-eco-auth
-# react-eco-auth
-# react-eco-auth
-# react-eco-auth
-# react-eco-auth
-# eco
-# eco
-# eco
 # eco
