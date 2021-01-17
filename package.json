@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "netlify": "^6.0.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "netlify": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
