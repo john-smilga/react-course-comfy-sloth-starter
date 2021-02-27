@@ -25,7 +25,8 @@
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "netlify": "netlify dev"
+    "netlify": "netlify dev",
+    "dev": "netlify dev"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^3.8.1"
+    "netlify-cli": "^3.10.1"
   }
 }
