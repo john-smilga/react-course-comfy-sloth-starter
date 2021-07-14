@@ -1,16 +1,48 @@
-import React from 'react'
-import logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom'
-import { useProductsContext } from '../context/products_context'
-import { FaTimes } from 'react-icons/fa'
-import { links } from '../utils/constants'
-import styled from 'styled-components'
-import CartButtons from './CartButtons'
-import { useUserContext } from '../context/user_context'
+import React, { useState } from "react";
+import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import { useProductsContext } from "../context/products_context";
+import { FaTimes } from "react-icons/fa";
+import { links } from "../utils/constants";
+import styled from "styled-components";
+import CartButtons from "./CartButtons";
+import { useUserContext } from "../context/user_context";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Sidebar = () => {
-  return <h4>sidebar</h4>
-}
+  const { isAuthenticated, user } = useAuth0();
+  const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const isUser = isAuthenticated && user;
+  return (
+    <SidebarContainer>
+      <aside className={`sidebar ${isSidebarOpen && "show-sidebar"}`}>
+        <div className="sidebar-header">
+          <img src={logo} alt="logo" className="logo" />
+          <button className="close-btn" onClick={closeSidebar}>
+            <FaTimes />
+          </button>
+        </div>
+        <div className="links">
+          {links.map(({ id, text, url }) => {
+            return (
+              <Link key={id} to={url} onClick={closeSidebar}>
+                {text}
+              </Link>
+            );
+          })}
+          {isUser && (
+            <Link to="/checkout" onClick={closeSidebar}>
+              checkout
+            </Link>
+          )}
+        </div>
+        <div className="cart-btn-wrapper">
+          <CartButtons />
+        </div>
+      </aside>
+    </SidebarContainer>
+  );
+};
 
 const SidebarContainer = styled.div`
   text-align: center;
@@ -75,12 +107,15 @@ const SidebarContainer = styled.div`
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media screen and (min-width: 992px) {
     .sidebar {
       display: none;
     }
   }
-`
+`;
 
-export default Sidebar
+export default Sidebar;
