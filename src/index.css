@@ -58,8 +58,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -186,9 +186,35 @@ p {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
 }
-.title {
-  text-align: center;
+.title.center {
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
 }
+
+.title > h2 {
+  position: relative;
+}
+.title.center > h2::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: calc(50% - 3rem);
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--clr-primary-5);
+}
+
+.title.left > h2::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--clr-primary-5);
+}
+
 .title .underline {
   width: 6rem;
   height: 0.25rem;

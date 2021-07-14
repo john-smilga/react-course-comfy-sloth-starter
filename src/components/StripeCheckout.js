@@ -1,29 +1,48 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { loadStripe } from '@stripe/stripe-js'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { loadStripe } from "@stripe/stripe-js";
 import {
   CardElement,
   useStripe,
   Elements,
   useElements,
-} from '@stripe/react-stripe-js'
-import axios from 'axios'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
-import { formatPrice } from '../utils/helpers'
-import { useHistory } from 'react-router-dom'
+} from "@stripe/react-stripe-js";
+import axios from "axios";
+import { useCartContext } from "../context/cart_context";
+import { useUserContext } from "../context/user_context";
+import { formatPrice } from "../utils/helpers";
+import { useHistory } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import { shippingCost } from "../utils/constants";
 
 const CheckoutForm = () => {
-  return <h4>hello from Stripe Checkout </h4>
-}
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <input type="text" />
+      <button type="submit">
+        <div className="spinner"></div>
+      </button>
+      <p className="result-message">
+        Payment succeeded, see the result in your Stripe dashboard. Refresh the
+        page to pay again.
+      </p>
+    </form>
+  );
+};
 
 const StripeCheckout = () => {
+  const { isAuthenticated, user } = useAuth0();
+  const isUser = isAuthenticated && user;
+  const { cartTotal } = useCartContext();
   return (
     <Wrapper>
+      {isUser && isUser.name && <h4>Hello, {isUser.name}</h4>}
+      <p>Your total is ${formatPrice(cartTotal + shippingCost)}</p>
+      <p>Test Card Number: 4242 4242 4242 4242</p>
       <CheckoutForm />
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   form {
@@ -122,7 +141,7 @@ const Wrapper = styled.section`
   .spinner:before,
   .spinner:after {
     position: absolute;
-    content: '';
+    content: "";
   }
   .spinner:before {
     width: 10.4px;
@@ -163,6 +182,6 @@ const Wrapper = styled.section`
       width: 80vw;
     }
   }
-`
+`;
 
-export default StripeCheckout
+export default StripeCheckout;

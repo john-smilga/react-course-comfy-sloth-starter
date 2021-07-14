@@ -1,10 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Filters, ProductList, Sort, PageHero } from '../components'
+import React from "react";
+import styled from "styled-components";
+import { Filters, ProductList, Sort, PageHero } from "../components";
 
 const ProductsPage = () => {
-  return <h4>products page</h4>
-}
+  return (
+    <main>
+      <PageHero />
+      <section className="section-center">
+        <Wrapper>
+          <div className="products">
+            <Filters />
+            <div>
+              <Sort />
+              <ProductList />
+            </div>
+          </div>
+        </Wrapper>
+      </section>
+    </main>
+  );
+};
 
 const Wrapper = styled.div`
   .products {
@@ -17,6 +32,6 @@ const Wrapper = styled.div`
       grid-template-columns: 200px 1fr;
     }
   }
-`
+`;
 
-export default ProductsPage
+export default ProductsPage;
