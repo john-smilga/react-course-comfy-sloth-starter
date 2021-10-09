@@ -4,11 +4,12 @@ import styled from 'styled-components'
 const Contact = () => {
   return <Wrapper>
     <div className="section-center">
-      <h3>Join our newsletter and get 20% off</h3>
+      <h3>Contact me today</h3>
       <div className="content">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas nulla quaerat cumque nam perferendis, ab minima quo unde magni deserunt!</p>
-        <form className="contact-form">
-          <input type="email" className="form-input" placeholder='enter-email' />
+        <p>Want to know more infomation on how I created this web application please leave your email, Thx Jermaine Bailey!</p>
+        <form className="contact-form" action="https://formspree.io/f/xayakvkv"
+            method="POST">
+          <input type="email" className="form-input" placeholder='enter-email' name="_replyto" />
           <button type="submit" className="submit-btn">
             subscribe
           </button>
