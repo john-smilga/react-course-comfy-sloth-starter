@@ -9,9 +9,9 @@ const Hero = () => {
     <article className="content">
       <h1>
         design your <br/>
-        modern contempary look
+        comfort zone
       </h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fugit rerum, officia esse nesciunt molestiae a ut, natus quisquam hic quidem numquam quas nostrum veniam magni, accusantium in unde impedit.</p>
+      <p>Home is where you often go to relax and de-stress after a long day. Create a space where you can go to feel your best. Weather it be the living room you designed or your bebroom that always bring you comfort.</p>
       <Link to='/products' className='btn hero-btn'>
         shop now
       </Link>

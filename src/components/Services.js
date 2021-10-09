@@ -6,10 +6,10 @@ const Services = () => {
   return <Wrapper>
     <div className="section-center">
     <article className="header">
-      <h3>custom furniture <br />
-      built only for you
+      <h3>custom homes <br />
+      requires a custom design
       </h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, est. Illum omnis rem repellendus earum atque natus tenetur odit similique.</p>
+      <p>See how you can transform your home into a beautiful, modern, contemporary space that focus on beauty, function, technology and substainabilty.</p>
     </article>
     <div className="services-center">
       {services.map((service)=>{
