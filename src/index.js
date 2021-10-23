@@ -12,7 +12,9 @@ ReactDOM.render(
 
 <ProductsProvider>
     <FilterProvider>
+    <CartProvider>
  <App />
+ </CartProvider>
  </FilterProvider>
 </ProductsProvider>
 , document.getElementById('root'))
