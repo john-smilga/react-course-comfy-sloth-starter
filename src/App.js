@@ -15,6 +15,7 @@ import {
 } from './pages'
 function App() {
   return(
+    <AuthWrapper>
     <Router>
     <Navbar />
     <Sidebar />
@@ -32,7 +33,7 @@ function App() {
         <Products />
       </Route>
       <Route path='/products/:id' children={<SingleProduct />} />
-      <PrivateRoute path='/checkout'>
+      <PrivateRoute exact path='/checkout'>
         <Checkout />
       </PrivateRoute>
       <Route path='*'>
@@ -41,6 +42,7 @@ function App() {
     </Switch>
     <Footer />
   </Router>
+  </AuthWrapper>
   ) 
 }
 
