@@ -5,7 +5,7 @@ import {
   REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
 } from '../actions'
-import CartItem from '../components/CartItem';
+//import CartItem from '../components/CartItem';
 
 const cart_reducer = (state, action) => {
   if(action.type === ADD_TO_CART){
@@ -70,14 +70,12 @@ return {...state, cart:[...state.cart, newItem]}
          }
 
         }
-       else{
-         return item
-       }
+       return item
      })
 
      return {...state, cart :tempCart}
    }
-   if(action.type == COUNT_CART_TOTALS){
+   if(action.type === COUNT_CART_TOTALS){
    const{total_items, total_amount} = state.cart.reduce((total, cartItem) => {
    const {amount, price} = cartItem
 

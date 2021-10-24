@@ -6,7 +6,6 @@ import {
   TOGGLE_CART_ITEM_AMOUNT,
   CLEAR_CART,
   COUNT_CART_TOTALS,
-  CLEAR_FILTERS,
 } from '../actions'
 
 const getLocalStorage = () =>{
