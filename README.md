@@ -1,22 +1,45 @@
-## Notes
+## React Project
 
-Capstone Project
+- Created a development branch
+- index.js for easier imports
 
-#### Older React Version
+## Styled Components
 
-```
-"react": "^16.13.1",
-"react-dom": "^16.13.1",
-"react-scripts": "3.4.3",
-```
+[Styled-Components - Main Docs](https://styled-components.com/)
 
-#### Current React Version
 
-```
-"react": "^17.0.1",
-"react-dom": "^17.0.1",
-"react-scripts": "4.0.0",
-```
+## React Icons
+
+[React Icons - Main Docs](https://react-icons.github.io/react-icons/)
+
+
+## React Router Dom
+
+version used - "react-router-dom": "^5.2.0",
+
+- [react-router-dom - Main Docs](https://reactrouter.com/web/guides/quick-start)
+
+- <Switch> renders the first child <Route> that matches
+- A <Route path="*"> always matches
+
+## Auth0 Docs
+
+- (https://auth0.com/docs)
+- [ API Keys ] https://manage.auth0.com/
+- [ Social Connections ] Google-oauth2
+- [Auth0 - Main Docs](https://auth0.com/)
+
+- Connections
+  email,social
+
+- [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
+- [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
+
+## Deployment
+
+[Netlify](https://www.netlify.com/)
+
+
 
 #### Alternative fix
 
