@@ -18,7 +18,8 @@ const Nav = () => {
         </Link>
         <button className='nav-toggle' type='button'>
           <FaBars />
-          <ul className='nav-links'>
+        </button>
+        <ul className='nav-links'>
             {links.map(link => {
               const { id, text, url } = link
               return (
@@ -28,7 +29,6 @@ const Nav = () => {
               )
             })}
           </ul>
-        </button>
         <CartButtons/>
       </div>
     </NavContainer>
