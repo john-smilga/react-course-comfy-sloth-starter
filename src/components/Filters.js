@@ -92,6 +92,7 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     column-gap: 0.5rem;
     font-size: 1rem;
+    max-width: 200px;
   }
   .clear-btn {
     background: var(--clr-red-dark);
