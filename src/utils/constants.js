@@ -24,21 +24,21 @@ export const services = [
     icon: <GiCompass />,
     title: 'mission',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Our enthusiasm for the mrdern/contemporary furniture can not be beat. We bring you the best selection, style, and handcrafted quality.',
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
     title: 'vision',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Find ideas and inspiration for your design style to add to your home.',
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
-    title: 'history',
+    title: 'similarities',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'Each style of space is typically simple and uncluttered, opting for smooth lines and a little dash or artistic flavor. Both styles are calming and neutral with exposed wood, metals and glass.',
   },
 ]
 
